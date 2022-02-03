@@ -2,3 +2,4 @@
 #### Đặc điểm chính:
 - Thiết kế theo mô hình MVVM
 - API được lấy từ https://cn-spring.herokuapp.com/
+- Sử dụng Navigation component để di chuyển giữa các màn hình
