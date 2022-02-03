@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.cn.ahelp3.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_100">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="96dp">
+
+                <!--Sub header: Last update post-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_last_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_update_post"
+                        android:textColor="@color/white_100"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        android:layout_marginStart="16dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_see_all"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ripple_normal"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/white_100"
+                        app:srcCompat="@drawable/ic_navigate_right"
+                        android:onClick="@{() -> homeViewModel.openAllPost()}"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:layout_marginEnd="16dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_last_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+
+                    app:layout_constraintTop_toBottomOf="@id/header_last_update"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

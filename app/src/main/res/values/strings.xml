@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">A Help</string>
+    <string name="wait_while_loading">Vui lòng chờ trong khi ứng dụng khởi động…</string>
+    <string name="loading_fail">Khởi động ứng dụng thất bại, kiểm tra log để biết thêm chi tiết.</string>
+    <string name="search_post">Tìm kiếm bài viết</string>
+    <string name="last_update_post">Mới cập nhật</string>
+    <string name="home_page">Trang chủ</string>
+    <string name="all_post_page">Tất cả bài viết</string>
+    <string name="all_tag_page">Danh mục</string>
+    <string name="post_detail_page">Bài viết</string>
+    <string-array name="post_type">
+        <item>Bài viết mới</item>
+        <item>Bài viết mở rộng</item>
+        <item>Bài viết lại</item>
+        <item>Bài viết sao chép</item>
+        <item>Bài viết</item>
+    </string-array>
+    <string name="updated_at_day">cập nhật ngày</string>
+    <string name="updated_at_time">cập nhật lúc</string>
+</resources>

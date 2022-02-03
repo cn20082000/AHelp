@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cn.ahelp3.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_allPostFragment"
+            app:destination="@id/allPostFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPostFragment"
+        android:name="com.cn.ahelp3.ui.post.AllPostFragment"
+        android:label="AllPostFragment"
+        tools:layout="@layout/fragment_all_post">
+        <action
+            android:id="@+id/action_allPostFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.cn.ahelp3.ui.post.postDetail.PostDetailFragment"
+        android:label="PostDetailFragment"
+        tools:layout="@layout/fragment_post_detail"/>
+    <fragment
+        android:id="@+id/allTagFragment"
+        android:name="com.cn.ahelp3.ui.tag.AllTagFragment"
+        android:label="AllTagFragment"
+        tools:layout="@layout/fragment_all_tag"/>
+</navigation>
