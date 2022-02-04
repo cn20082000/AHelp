@@ -1,5 +1,7 @@
 package com.cn.ahelp3.ui.tag;
 
+import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -68,7 +70,9 @@ public class AllTagFragment extends BaseFragment<FragmentAllTagBinding, AllTagNa
                 return new TagRecyclerAdapter(getContext()) {
                     @Override
                     protected void onTagClick(Tag tag) {
-
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("tag", tag);
+                        navController.navigate(R.id.action_allTagFragment_to_singleTagFragment, bundle);
                     }
                 };
             }

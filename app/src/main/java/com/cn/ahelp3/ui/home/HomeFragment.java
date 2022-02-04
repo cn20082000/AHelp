@@ -78,7 +78,9 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding, HomeNavigati
 
                     @Override
                     public void onTagClick(Tag tag) {
-
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("tag", tag);
+                        navController.navigate(R.id.action_homeFragment_to_singleTagFragment, bundle);
                     }
                 };
             }

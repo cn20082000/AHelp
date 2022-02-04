@@ -24,6 +24,13 @@
             app:exitAnim="@anim/long_slide_out_left"
             app:popEnterAnim="@anim/long_slide_in_left"
             app:popExitAnim="@anim/long_slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_singleTagFragment"
+            app:destination="@id/singleTagFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/allPostFragment"
@@ -33,6 +40,13 @@
         <action
             android:id="@+id/action_allPostFragment_to_postDetailFragment"
             app:destination="@id/postDetailFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+        <action
+            android:id="@+id/action_allPostFragment_to_singleTagFragment"
+            app:destination="@id/singleTagFragment"
             app:enterAnim="@anim/long_slide_in_right"
             app:exitAnim="@anim/long_slide_out_left"
             app:popEnterAnim="@anim/long_slide_in_left"
@@ -47,5 +61,33 @@
         android:id="@+id/allTagFragment"
         android:name="com.cn.ahelp3.ui.tag.AllTagFragment"
         android:label="AllTagFragment"
-        tools:layout="@layout/fragment_all_tag"/>
+        tools:layout="@layout/fragment_all_tag">
+        <action
+            android:id="@+id/action_allTagFragment_to_singleTagFragment"
+            app:destination="@id/singleTagFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleTagFragment"
+        android:name="com.cn.ahelp3.ui.tag.singleTag.SingleTagFragment"
+        android:label="SingleTagFragment"
+        tools:layout="@layout/fragment_single_tag">
+        <action
+            android:id="@+id/action_singleTagFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+        <action
+            android:id="@+id/action_singleTagFragment_self"
+            app:destination="@id/singleTagFragment"
+            app:enterAnim="@anim/long_slide_in_right"
+            app:exitAnim="@anim/long_slide_out_left"
+            app:popEnterAnim="@anim/long_slide_in_left"
+            app:popExitAnim="@anim/long_slide_out_right" />
+    </fragment>
 </navigation>

@@ -13,6 +13,7 @@ public interface ApiManager {
     ApiObject<String> wakeUp(String message);
     ApiObject<PagedObject<Post>> lastUpdatedPost();
     ApiObject<PagedObject<Post>> allPost(int page);
+    ApiObject<PagedObject<Post>> getPostByTag(int page, List<Tag> tags);
     ApiObject<PostDetail> getPost(Long id);
     ApiObject<List<Tag>> getAllTag();
 }

@@ -30,6 +30,11 @@ public class DataManagerImpl implements DataManager {
     }
 
     @Override
+    public ApiObject<PagedObject<Post>> getPostByTag(int page, List<Tag> tags) {
+        return api.getPostByTag(page, tags);
+    }
+
+    @Override
     public ApiObject<PostDetail> getPost(Long id) {
         return api.getPost(id);
     }

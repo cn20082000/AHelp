@@ -10,7 +10,9 @@ import com.cn.ahelp3.data.model.Post;
 import com.cn.ahelp3.data.model.PostDetail;
 import com.cn.ahelp3.data.model.Tag;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ApiManagerImpl implements ApiManager {
 
@@ -31,6 +33,15 @@ public class ApiManagerImpl implements ApiManager {
     @Override
     public ApiObject<PagedObject<Post>> allPost(int page) {
         return new ApiObject<>(post.allPost(page));
+    }
+
+    @Override
+    public ApiObject<PagedObject<Post>> getPostByTag(int page, List<Tag> tags) {
+        List<Long> tagsId = new ArrayList<>();
+        for (Tag tag : tags) {
+            tagsId.add(tag.getId());
+        }
+        return new ApiObject<>(post.postByTag(page, tagsId));
     }
 
     @Override
